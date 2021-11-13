@@ -14,6 +14,7 @@ import MainEvents from './components/events/mainEvents';
 import PopularIndexes from './components/events/highlightsViewAll';
 import SearchResult from './components/events/searchResult';
 import Index from './components/events';
+import CoinDetailsPage from './components/coinDetailsPage/coinDetailsPage';
 
 const Drawer = createDrawerNavigator();
 function DrawerRouteHome() {
@@ -75,6 +76,7 @@ function App() {
         <Stack.Screen name='advanceSearch' component={AdvanceSearch} />
         <Stack.Screen name='highlights' component={Highlights} />
         <Stack.Screen name='pastevents' component={Pastevents} />
+        <Stack.Screen name='coinDetailsPage' component={CoinDetailsPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

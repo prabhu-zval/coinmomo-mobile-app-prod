@@ -6,11 +6,11 @@ import Derivatives from '../derivatives/derivatives';
 import Exchanges from '../exchanges/exchanges';
 import { Dimensions, LogBox } from "react-native";
 // import Events from '../events/events';
-// import Chart from '../coinDetailsHeaderTabs/chart/chart';
-// import Details from '../coinDetailsHeaderTabs/details/details';
-// import Converter from '../coinDetailsHeaderTabs/converter/converter'
-// import CoinEvents from '../coinDetailsHeaderTabs/coinEvents/coinEvents';
-// import CoinExchanges from '../coinDetailsHeaderTabs/coinExchanges/coinExchanges'
+import Chart from '../coinDetailsHeaderTabs/chart/chart';
+import Details from '../coinDetailsHeaderTabs/details/details';
+import Converter from '../coinDetailsHeaderTabs/converter/converter'
+import CoinEvents from '../coinDetailsHeaderTabs/coinEvents/coinEvents';
+import CoinExchanges from '../coinDetailsHeaderTabs/coinExchanges/coinExchanges'
 // import Blogs from '../blogs/blogs'
 // import BeamUpdates from '../beamUpdates/beamUpdates'
 // import BuyTab from '../transactionTabs/buyTab/buyTab';
