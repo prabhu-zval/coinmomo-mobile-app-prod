@@ -24,7 +24,7 @@
         "foregroundImage": "./assets/img/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.coinmomo.apk"
+      "package": "com.aab.coinmomo"
     },
     "web": {
       "favicon": "./assets/img/favicon.png"
