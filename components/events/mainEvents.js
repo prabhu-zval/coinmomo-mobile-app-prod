@@ -621,11 +621,10 @@ const style = StyleSheet.create({
         paddingTop: 4
     },
     eventsDataList: {
-        paddingTop: '2%',
+        paddingTop: '3%',
         height: '100%',
         width: '97%',
         marginLeft: '2%',
-        backgroundColor: 'white',
         paddingBottom: 150
     },
     dataContainer: {
