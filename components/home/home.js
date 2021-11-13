@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import Header from "../header/header";
 import { View, StyleSheet } from "react-native";
 import { LoginContext } from '../../context/context';
-// import { HeaderMenus } from '../headerMenus/headerMenus';
+import { HeaderMenus } from '../headerMenus/headerMenus';
 import Footer from '../Footer/footer';
 
 export default function Home(props) {
@@ -14,9 +14,9 @@ export default function Home(props) {
             <Header props={props} />
             {screenLoading ? <View style={styles.loadingView}></View> : null}
             <View style={styles.headerMenus}>
-                {/* <HeaderMenus /> */}
+                <HeaderMenus />
             </View>
-            {/* <Footer props={props} /> */}
+            <Footer props={props} />
         </View>
     );
 }
