@@ -157,11 +157,11 @@ export default function Cryptocurrency(props) {
                     <View style={style.iconAndText}>
                         <TouchableOpacity>
                             <Image style={style.marketImage} source={{ uri: item.image }} />
-                            <Text numberOfLines={2} style={style.symbolText}>{item.symbol.toUpperCase()}</Text></TouchableOpacity>
+                            <Text numberOfLines={1} style={style.symbolText}>{item.symbol.toUpperCase()}</Text></TouchableOpacity>
                     </View>
                     {item.current_price ? <View style={style.marketPrice}><Text numberOfLines={1} style={style.priceText}>${marketPriceInDollar}</Text></View> : <View style={style.noMarketPrice}><Text style={style.priceText}>--</Text></View>}
-                    {item.price_change_percentage_24h ? <Text numberOfLines={1} style={[style.price24H, { color: price24HColor }]}>{item.price_change_percentage_24h.toFixed(2)}%</Text> : <Text style={style.noPrice24H}>--</Text>}
-                    {item.market_cap ? <Text numberOfLines={1} style={style.marketCap}>${marketCapInDollar}</Text> : <Text style={style.noMarketCap}>--</Text>}
+                    {item.price_change_percentage_24h ? <View style={style.volumeAlignment}><Text numberOfLines={1} style={[style.price24H, { color: price24HColor }]}>{item.price_change_percentage_24h.toFixed(2)}%</Text></View> : <View style={style.volumeAlignment}><Text style={style.noPrice24H}>--</Text></View>}
+                    {item.market_cap ? <View style={style.marketcapAlignment}><Text numberOfLines={1} style={style.marketCap}>${marketCapInDollar}</Text></View> : <View style={style.marketcapAlignment}><Text style={style.noMarketCap}>--</Text></View>}
                 </View>
             </TouchableOpacity>
         );
@@ -244,6 +244,15 @@ export default function Cryptocurrency(props) {
     );
 }
 const style = StyleSheet.create({
+    marketcapAlignment: {
+        width: '32%',
+        alignItems: 'center',
+        paddingLeft: '2%'
+    },
+    volumeAlignment: {
+        width: '13%',
+        alignItems: 'center'
+    },
     priceText: {
         fontWeight: 'bold',
         color: 'black'
@@ -343,9 +352,8 @@ const style = StyleSheet.create({
         color: '#525252'
     },
     iconAndText: {
-        width: '14%',
+        width: '15%',
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center'
     },
     symbolText: {
@@ -354,36 +362,29 @@ const style = StyleSheet.create({
         color: '#525252'
     },
     price24H: {
-        width: '12%',
-        paddingTop: '1%',
+        paddingTop: '7%',
         fontWeight: 'bold',
     },
     noPrice24H: {
-        width: '14%',
-        paddingTop: '1%',
-        paddingLeft: '4%',
+        paddingTop: '7%',
         fontWeight: 'bold',
     },
     marketPrice: {
-        width: '25%',
+        width: '22%',
         paddingTop: '1%',
         alignItems: 'center'
     },
     noMarketPrice: {
-        width: '20%',
+        width: '25%',
         paddingTop: '1%',
-        paddingLeft: '6%'
     },
     marketCap: {
-        marginLeft: 10,
-        paddingTop: '1%',
+        paddingTop: '2%',
         fontWeight: 'bold',
         color: 'black'
     },
     noMarketCap: {
-        marginLeft: 10,
-        paddingTop: '1%',
-        paddingLeft: '10%',
+        paddingTop: '2%',
         fontWeight: 'bold',
         color: 'black'
     },
