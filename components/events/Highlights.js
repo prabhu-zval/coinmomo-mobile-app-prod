@@ -317,7 +317,7 @@ const style = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: '2.3%'
+        marginTop: 8
     },
     image: {
         height: 25,
@@ -332,7 +332,7 @@ const style = StyleSheet.create({
         textAlign: 'center',
     },
     eventNameAndDate: {
-        marginTop: '1%',
+        marginTop: 3,
         alignItems: 'center'
     },
     viewsAndVotes: {
@@ -341,7 +341,7 @@ const style = StyleSheet.create({
         justifyContent: 'space-between',
         marginLeft: '5%',
         marginRight: '5%',
-        marginTop: '1.3%'
+        marginTop: 5
     },
     eventDate: {
         color: 'green'
@@ -351,11 +351,10 @@ const style = StyleSheet.create({
         width: '45%',
         borderRadius: 50,
         backgroundColor: '#3F51B5',
-        marginTop: '2.5%',
-        paddingTop: 2.5,
-        paddingBottom: 5,
+        marginTop: 10,
         fontSize: 13,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        justifyContent: 'center'
     },
     viewAll: {
         height: 30,
