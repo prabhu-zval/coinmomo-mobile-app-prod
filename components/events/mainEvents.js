@@ -629,14 +629,12 @@ const style = StyleSheet.create({
         paddingBottom: 150
     },
     dataContainer: {
-        borderRadius: 5,
+        borderRadius: 10,
         paddingBottom: 0,
         fontWeight: "bold",
         height: 170,
         backgroundColor: 'white',
         elevation: 5,
-        borderColor: 'black',
-        borderWidth: 0.6,
         width: '49%',
         marginBottom: '2%',
         marginRight: '1.3%',
@@ -675,8 +673,9 @@ const style = StyleSheet.create({
         fontSize: 12,
         alignSelf: 'center',
         color: 'white',
-        borderBottomStartRadius: 2,
-        borderBottomEndRadius: 2,
+        marginTop: '0.4%',
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
         backgroundColor: '#3F51B5',
     },
     imageAndSymbol: {
@@ -711,18 +710,17 @@ const style = StyleSheet.create({
     source: {
         height: 20,
         width: '50%',
-        textAlign: 'center',
         marginTop: 8,
         fontSize: 10,
         alignSelf: 'center',
+        justifyContent: 'center',
         color: 'white',
         borderRadius: 50,
         backgroundColor: '#3F51B5',
     },
     sourceText: {
-        marginTop: '1%',
+        alignSelf: 'center',
         color: 'white',
-        textAlign: 'center',
         fontSize: 12.5,
         fontWeight: 'bold'
     },

@@ -231,7 +231,7 @@ const style = StyleSheet.create({
         paddingLeft: 10
     },
     highlightsData: {
-        height: 170,
+        height: 175,
         marginLeft: '1%',
         marginRight: '1%',
         backgroundColor: 'white',
