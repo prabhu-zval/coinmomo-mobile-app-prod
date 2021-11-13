@@ -212,7 +212,7 @@ const style = StyleSheet.create({
     },
     highlightsContainer: {
         height: '100%',
-        backgroundColor: '#242B2E',
+        backgroundColor: '#CAD5E2',
         padding: 2,
     },
     hightlightsText: {

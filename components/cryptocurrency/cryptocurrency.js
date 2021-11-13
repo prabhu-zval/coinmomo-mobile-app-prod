@@ -365,7 +365,7 @@ const style = StyleSheet.create({
         fontWeight: 'bold',
     },
     marketPrice: {
-        width: '28%',
+        width: '26%',
         paddingTop: '1%',
         alignItems: 'center'
     },
