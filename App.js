@@ -14,6 +14,11 @@ import MainEvents from './components/events/mainEvents';
 import PopularIndexes from './components/events/highlightsViewAll';
 import SearchResult from './components/events/searchResult';
 import Index from './components/events';
+import Portfolio from './components/portfolio';
+import CreatePortfolio from './components/userPortfolio/createPortfolio'
+import PortfolioTransactions from './components/portfolio/transactions';
+import ListingPage from './components/userPortfolio/listingPage'
+import PortfolioAssets from './components/portfolio/assets';
 import CoinDetailsPage from './components/coinDetailsPage/coinDetailsPage';
 
 const Drawer = createDrawerNavigator();
@@ -76,6 +81,10 @@ function App() {
         <Stack.Screen name='advanceSearch' component={AdvanceSearch} />
         <Stack.Screen name='highlights' component={Highlights} />
         <Stack.Screen name='pastevents' component={Pastevents} />
+        <Stack.Screen name='portfolio' component={Portfolio} />
+        <Stack.Screen name='transactionOverview' component={PortfolioTransactions} />
+        <Stack.Screen name='createPortfolio' component={CreatePortfolio} />
+        <Stack.Screen name='portfolioAssets' component={PortfolioAssets} />
         <Stack.Screen name='coinDetailsPage' component={CoinDetailsPage} />
       </Stack.Navigator>
     </NavigationContainer>

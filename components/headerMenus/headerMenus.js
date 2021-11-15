@@ -13,12 +13,12 @@ import CoinEvents from '../coinDetailsHeaderTabs/coinEvents/coinEvents';
 import CoinExchanges from '../coinDetailsHeaderTabs/coinExchanges/coinExchanges'
 // import Blogs from '../blogs/blogs'
 // import BeamUpdates from '../beamUpdates/beamUpdates'
-// import BuyTab from '../transactionTabs/buyTab/buyTab';
-// import SellTab from '../transactionTabs/sellTab/sellTab';
-// import TransferTab from '../transactionTabs/transferTab/transferTab';
-// import BuyTransaction from '../coinTransactionTabs/buyTransaction';
-// import SellTransaction from '../coinTransactionTabs/sellTransaction';
-// import TransferTransaction from '../coinTransactionTabs/transferTransaction';
+import BuyTab from '../transactionTabs/buyTab/buyTab';
+import SellTab from '../transactionTabs/sellTab/sellTab';
+import TransferTab from '../transactionTabs/transferTab/transferTab';
+import BuyTransaction from '../coinTransactionTabs/buyTransaction';
+import SellTransaction from '../coinTransactionTabs/sellTransaction';
+import TransferTransaction from '../coinTransactionTabs/transferTransaction';
 
 const deviceWidth = Dimensions.get('window').width;
 const Tab = createMaterialTopTabNavigator();
