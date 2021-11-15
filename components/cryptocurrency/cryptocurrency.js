@@ -296,8 +296,6 @@ const style = StyleSheet.create({
     btcFilters: {
         display: 'flex',
         flexDirection: 'row',
-        width: 80,
-        height: 30,
         marginBottom: 5,
         marginLeft: 10,
         marginTop: 10,

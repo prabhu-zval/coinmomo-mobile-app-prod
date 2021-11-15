@@ -79,7 +79,7 @@ const style = StyleSheet.create({
         fontWeight: 'bold'
     },
     Icon: {
-        paddingLeft: '10%'
+        alignSelf: 'center'
     }
 });
 

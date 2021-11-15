@@ -336,6 +336,7 @@ const style = StyleSheet.create({
     },
     coinSuggestionsView: {
         height: 50,
+        marginTop: '0.4%',
         backgroundColor: 'white',
         alignSelf: 'center',
         width: '100%',
