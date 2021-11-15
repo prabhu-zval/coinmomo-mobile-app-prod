@@ -23,36 +23,36 @@ const Footer = (props) => {
     }
     return (
         <View style={style.Footer}>
-            <View style={style.marketLogo}>
+            <View style={style.Logo}>
                 <TouchableOpacity onPress={() => props.props.navigation.navigate('home')}>
-                    <FontAwesome5 style={style.marketIcon} name="list-alt" size={20} color="white" />
+                    <FontAwesome5 style={style.Icon} name="list-alt" size={20} color="white" />
                     <Text style={style.footerIconText}>Market</Text>
                 </TouchableOpacity>
             </View>
-            <View>
+            <View style={style.Logo}>
                 <TouchableOpacity onPress={() => { onPressPortfolio() }}>
-                    <FontAwesome style={style.portfolioIcon} name="line-chart" size={20} color="white" />
+                    <FontAwesome style={style.Icon} name="line-chart" size={20} color="white" />
                     <Text style={style.footerIconText}>Portfolio</Text>
                 </TouchableOpacity>
             </View>
-            <View>
+            <View style={style.Logo}>
                 <TouchableOpacity onPress={() => props.props.navigation.navigate('search')}>
-                    <Feather style={style.searchIcon} name='search' size={23} color='white' />
+                    <Feather style={style.Icon} name='search' size={23} color='white' />
                     <Text style={style.footerIconText}>Search</Text>
                 </TouchableOpacity>
             </View>
-            <View>
+            <View style={style.Logo}>
                 <TouchableOpacity onPress={() => props.props.navigation.navigate('index')}>
-                    <MaterialIcons style={style.exploreIcon} name='event-note' size={23} color='white' />
+                    <MaterialIcons style={style.Icon} name='event-note' size={23} color='white' />
                     <Text style={style.footerIconText}>Events</Text>
                 </TouchableOpacity>
             </View>
+            <View style={style.Logo}>
             <TouchableOpacity onPress={() => props.props.navigation.navigate('forum')}>
-                <View style={style.forum}>
-                    <MaterialCommunityIcons name="forum-outline" size={22} color="white" />
+                    <MaterialCommunityIcons style={style.Icon} name="forum-outline" size={22} color="white" />
                     <Text style={style.footerIconText}>Forum</Text>
-                </View>
             </TouchableOpacity>
+            </View>
         </View>
     );
 }
@@ -68,35 +68,18 @@ const style = StyleSheet.create({
         position: 'absolute',
         width: '100%'
     },
-    marketLogo: {
-        paddingLeft: 15
-    },
-    forum: {
-        paddingRight: 15,
-    },
-    moreIcon: {
-        marginLeft: 2
+    Logo: {
+        width: '20%',
+        alignSelf: 'center',
+        alignItems: 'center',
     },
     footerIconText: {
         fontSize: 13,
         color: 'white',
         fontWeight: 'bold'
     },
-    portfolioIcon: {
-        marginTop: 2,
-        marginLeft: 12,
-        marginBottom: 2
-    },
-    searchIcon: {
-        marginLeft: 8
-    },
-    exploreIcon: {
-        marginLeft: 8
-    },
-    marketIcon: {
-        marginLeft: 8,
-        marginTop: 2,
-        marginBottom: 1
+    Icon: {
+        paddingLeft: '10%'
     }
 });
 
