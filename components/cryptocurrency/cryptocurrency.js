@@ -157,7 +157,7 @@ export default function Cryptocurrency(props) {
                     <View style={style.iconAndText}>
                         <TouchableOpacity>
                             <Image style={style.marketImage} source={{ uri: item.image }} />
-                            <Text numberOfLines={1} style={style.symbolText}>{item.symbol.toUpperCase()}</Text></TouchableOpacity>
+                            <View style={style.symbolView}><Text style={style.symbolText}>{item.symbol.toUpperCase()}</Text></View></TouchableOpacity>
                     </View>
                     {item.current_price ? <View style={style.marketPrice}><Text numberOfLines={1} style={style.priceText}>${marketPriceInDollar}</Text></View> : <View style={style.noMarketPrice}><Text style={style.priceText}>--</Text></View>}
                     {item.price_change_percentage_24h ? <View style={style.volumeAlignment}><Text numberOfLines={1} style={[style.price24H, { color: price24HColor }]}>{item.price_change_percentage_24h.toFixed(2)}%</Text></View> : <View style={style.volumeAlignment}><Text style={style.noPrice24H}>--</Text></View>}
@@ -357,9 +357,13 @@ const style = StyleSheet.create({
         alignItems: 'center'
     },
     symbolText: {
-        width: '100%',
         fontWeight: 'bold',
         color: '#525252'
+    },
+    symbolView: {
+        width: '80%',
+        flexWrap: 'wrap',
+        alignItems: 'center',
     },
     price24H: {
         paddingTop: '7%',
