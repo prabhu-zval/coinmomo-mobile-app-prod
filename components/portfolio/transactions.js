@@ -416,10 +416,10 @@ export default function PortfolioTransactions(props) {
                                 </View>
                                 <View style={style.fee}>
                                     <TouchableOpacity activeOpacity={0.9} style={style.editCoinContainerInner1} onPress={() => { TransactionEditModal(val.type, val._id, val.quantity, val.pricePerCoin, val.date, val.fee, val.notes); setPopupBackground(true); }} >
-                                        <Feather style={style.actionEdit} name="edit-3" size={16} color="white" />
+                                        <Feather style={style.actionEdit} name="edit-3" size={20} color="white" />
                                     </TouchableOpacity>
                                     <TouchableOpacity activeOpacity={0.9} style={style.editCoinContainerInner} onPress={() => { setDeleteModalVisible(true); setTransactionDelete(val._id); setPopupBackground(true); }}>
-                                        <MaterialIcons style={style.actionDelete} name="delete-outline" size={20} color="white" />
+                                        <MaterialIcons style={style.actionDelete} name="delete-outline" size={24} color="white" />
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -771,10 +771,10 @@ const style = StyleSheet.create({
         elevation: 5
     },
     actionEdit: {
-        marginVertical: '28%'
+        marginVertical: '25%'
     },
     actionDelete: {
-        marginVertical: '24%'
+        marginVertical: '21%'
     },
     titles: {
         color: '#7d7d7d',
