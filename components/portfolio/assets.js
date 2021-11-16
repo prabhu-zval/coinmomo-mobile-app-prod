@@ -412,10 +412,10 @@ export default function PortfolioAssets(props) {
                                     </View>
                                     <View style={style.action}>
                                         <TouchableOpacity activeOpacity={0.9} style={style.addCoinContainerInner1} onPress={() => { setPopupBackground(true); openTransactionModal(val.id, val.current_price, val.name + ` (${val.symbol.toUpperCase()})`, val.image); setQuantity(''); setCurrentTab('Buy'); setModalVisible(true); setAssetsCoin(val.name + ` (${val.symbol.toUpperCase()})`); setAssetsCoinImage(val.image) }} >
-                                            <Entypo name="plus" size={25} color="white" />
+                                            <Entypo style={style.actionAdd} name="plus" size={25} color="white" />
                                         </TouchableOpacity>
                                         <TouchableOpacity activeOpacity={0.9} style={style.addCoinContainerInner} onPress={() => { setPopupBackground(true); setDeleteModalVisible(true); setState(val.id) }}>
-                                            <MaterialIcons name="delete-outline" size={25} color="white" />
+                                            <MaterialIcons style={style.actionDelete} name="delete-outline" size={25} color="white" />
                                         </TouchableOpacity>
                                     </View>
                                 </View>
@@ -632,7 +632,6 @@ const style = StyleSheet.create({
     },
     addCoinContainerInner: {
         width: '65%',
-        height: '42%',
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
@@ -643,7 +642,6 @@ const style = StyleSheet.create({
     },
     addCoinContainerInner1: {
         width: '65%',
-        height: '42%',
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
@@ -651,6 +649,12 @@ const style = StyleSheet.create({
         borderRadius: 50,
         display: 'flex',
         elevation: 5
+    },
+    actionAdd: {
+        marginVertical: '19%'
+    },
+    actionDelete: {
+        marginVertical: '19%'
     },
     allHeading: {
         color: 'white',
