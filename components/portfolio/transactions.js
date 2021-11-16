@@ -376,7 +376,6 @@ export default function PortfolioTransactions(props) {
                 <Text style={style.allHeading}>Amount</Text>
                 <Text style={style.allHeading}>QTY</Text>
                 <Text style={style.allHeading}>Fees</Text>
-                <Text style={style.allHeading}>Action</Text>
             </View>
             <View style={style.activityIndicatorView}>
                 {activityIndicator ? <ActivityIndicator style={style.activityIndicator} size='large' color='blue'></ActivityIndicator> : null}
@@ -564,7 +563,7 @@ export default function PortfolioTransactions(props) {
                                             <TouchableOpacity activeOpacity={0.9} onPress={() => { setDateModalVisible(true); }}>
                                                 <View style={style.dateContainer}>
                                                     <Fontisto style={style.calendarIcon} name="calendar" size={26} color="black" />
-                                                    <View >
+                                                    <View style={{flexDirection: 'column'}}>
                                                         <Text style={style.dateText}>{date.substr(0, 14)}</Text>
                                                         <Text style={style.timeText}>{date.substr(14,)}</Text>
                                                     </View>
@@ -629,9 +628,9 @@ export default function PortfolioTransactions(props) {
                                             <TouchableOpacity activeOpacity={0.9} onPress={() => { setDateModalVisible(true); }}>
                                                 <View style={style.dateContainer}>
                                                     <Fontisto style={style.calendarIcon} name="calendar" size={26} color="white" />
-                                                    <View >
-                                                        <Text style={style.dateText}>{date.substr(0, 14)}</Text>
-                                                        <Text style={style.timeText}>{date.substr(14,)}</Text>
+                                                    <View style={{flexDirection: 'column'}}>
+                                                        <Text style={style.dateText}>{date.substr(0, 13)}</Text>
+                                                        <Text style={style.timeText}>{date.substr(13,)}</Text>
                                                     </View>
                                                 </View>
                                             </TouchableOpacity>
@@ -757,36 +756,32 @@ const style = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         borderRadius: 50,
-        height: 30,
-        width: 80,
         display: 'flex',
         flexDirection: 'row',
-        paddingLeft: 8,
-        marginTop: 14,
+        paddingLeft: '9%',
         elevation: 5
     },
     editCoinContainerInner1: {
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         borderRadius: 50,
-        height: 30,
-        width: 80,
         display: 'flex',
         flexDirection: 'row',
-        paddingLeft: 12,
-        marginTop: 14,
+        paddingLeft: '17%',
         elevation: 5
     },
     addCoinTextInner: {
         color: 'white',
         fontSize: 14,
         fontWeight: 'bold',
+        marginVertical: '5%'
     },
     addCoinTextInner1: {
         color: 'white',
         fontSize: 14,
         fontWeight: 'bold',
-        marginLeft: 7
+        marginVertical: '5%',
+        marginLeft: '7%'
     },
     titles: {
         color: '#7d7d7d',
@@ -836,13 +831,13 @@ const style = StyleSheet.create({
     modalText: {
         fontSize: 15,
         fontWeight: 'bold',
-        marginTop: 10
+        marginTop: '3%'
     },
     buttons: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        width: '85%'
+        width: '95%'
     },
     editTransactionContainer: {
         width: '100%',
@@ -860,8 +855,8 @@ const style = StyleSheet.create({
         alignSelf: 'center'
     },
     calendarIcon: {
-        marginTop: 10,
-        marginRight: 15
+        marginTop: '2%',
+        marginRight: '8%'
     },
     feeText: {
         fontSize: 15,
@@ -914,7 +909,6 @@ const style = StyleSheet.create({
         elevation: 5
     },
     dateText: {
-        paddingLeft: 1,
         fontSize: 14,
         color: 'white',
         fontWeight: 'bold'
@@ -1147,7 +1141,7 @@ const style = StyleSheet.create({
     deleteModalView: {
         backgroundColor: 'white',
         borderRadius: 20,
-        padding: 35,
+        padding: '9%',
         height: 180,
         width: '80%',
         alignItems: 'center',
@@ -1264,9 +1258,9 @@ const style = StyleSheet.create({
         display: 'flex'
     },
     fee: {
-        width: '20%',
+        width: '18.5%',
         display: 'flex',
-        paddingLeft: 3
+        justifyContent: 'space-evenly'
     },
     IconAndText: {
         marginTop: 25,
@@ -1351,21 +1345,21 @@ const style = StyleSheet.create({
         textAlign: 'center'
     },
     addTransactionContainer: {
-        marginTop: '3%',
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         alignSelf: 'flex-end',
         borderRadius: 50,
-        height: 40,
-        width: 170,
-        marginRight: '3%',
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginTop: '2.2%',
+        marginRight: '2.5%'
     },
     addTransactionView: {
         display: 'flex',
         flexDirection: 'row',
-        marginLeft: '8%'
+        alignItems: 'center',
+        marginHorizontal: '3%',
+        marginVertical: '1.5%'
     },
     addTransactionText: {
         color: 'white',
@@ -1389,7 +1383,7 @@ const style = StyleSheet.create({
         display: 'flex',
         alignSelf: 'center',
         color: 'white',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     quantityError: {
         backgroundColor: '#fff6f8',

@@ -375,7 +375,6 @@ export default function PortfolioAssets(props) {
                 <Text style={style.allHeading}>Holdings</Text>
                 <Text style={style.allHeading}>QTY</Text>
                 <Text style={style.allHeading}>PNL(%)</Text>
-                <Text style={style.allHeading}>Action</Text>
             </View>
             <View style={style.activityIndicatorView}>
                 {activityIndicator ? <ActivityIndicator style={style.activityIndicator} size='large' color='blue'></ActivityIndicator> : null}
@@ -637,37 +636,31 @@ const style = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         borderRadius: 50,
-        height: 30,
-        width: 80,
         display: 'flex',
         flexDirection: 'row',
-        paddingLeft: 8,
-        marginTop: 7,
+        paddingLeft: '10.5%',
         elevation: 5
     },
     addCoinContainerInner1: {
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         borderRadius: 50,
-        height: 30,
-        width: 80,
         display: 'flex',
         flexDirection: 'row',
-        paddingLeft: 12.5,
-        marginTop: 7,
-        marginBottom: 10,
+        paddingLeft: '17%',
         elevation: 5
     },
     addCoinTextInner: {
         color: 'white',
         fontSize: 14,
         fontWeight: 'bold',
-        marginLeft: 1
+        marginVertical: '6%'
     },
     addCoinTextInner1: {
         color: 'white',
         fontSize: 14,
         fontWeight: 'bold',
+        marginVertical: '6%'
     },
     allHeading: {
         color: 'white',
@@ -722,8 +715,8 @@ const style = StyleSheet.create({
     placeholder: {
         backgroundColor: 'white',
         width: '100%',
-        borderColor: 'black',
-        borderWidth: 0.7,
+        borderColor: '#F75626',
+        borderWidth: 1.5,
         height: 35,
         borderRadius: 4,
         paddingLeft: 10
@@ -735,9 +728,9 @@ const style = StyleSheet.create({
     },
     nameContainer: {
         justifyContent: 'flex-start',
-        width: '60%',
+        width: '61%',
         padding: 10,
-        paddingLeft: 15,
+        paddingLeft: '3%',
         marginTop: 10,
     },
     portfolioName: {
@@ -828,9 +821,9 @@ const style = StyleSheet.create({
     deleteModalView: {
         backgroundColor: 'white',
         borderRadius: 20,
-        padding: 35,
-        height: 170,
-        width: '70%',
+        padding: '10%',
+        height: 200,
+        width: '80%',
         alignItems: 'center',
         shadowColor: '#000',
         shadowOffset: {
@@ -999,7 +992,7 @@ const style = StyleSheet.create({
     iconAndText: {
         width: '27%',
         marginBottom: 5,
-        paddingLeft: 12
+        paddingLeft: '3%'
     },
     marketImage: {
         width: 20,
@@ -1016,7 +1009,8 @@ const style = StyleSheet.create({
         width: '26%',
     },
     action: {
-        width: '21%',
+        width: '19%',
+        justifyContent: 'space-evenly'
     },
     backIconAndText: {
         marginTop: 25,
@@ -1104,30 +1098,28 @@ const style = StyleSheet.create({
         textAlign: 'center'
     },
     addCoinContainer: {
-        marginTop: '3%',
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         alignSelf: 'flex-end',
         borderRadius: 50,
-        height: 40,
-        width: 130,
-        marginRight: '1.5%',
         display: 'flex',
-        paddingLeft: '5%',
         flexDirection: 'row',
-        marginBottom: '0.5%'
+        marginBottom: '1%',
     },
     addCoinView: {
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginHorizontal: '3%',
+        marginVertical: '5%',
+    },
+    addCoinIcon: {
+        paddingLeft: '3%',
+        paddingRight: '0.4%'
     },
     addCoinText: {
         color: 'white',
         fontSize: 15,
         fontWeight: 'bold'
-    },
-    addCoinIcon: {
-        marginTop: '2%'
     },
     zeroPnlPercentage: {
         color: 'black'

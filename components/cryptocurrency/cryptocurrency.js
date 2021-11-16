@@ -400,7 +400,7 @@ const style = StyleSheet.create({
         height: 50,
         paddingTop: 15,
         marginRight: '5%',
-        marginLeft: '3%'
+        marginLeft: '6%'
     },
     marketCapIcon: {
         textAlign: 'center'
@@ -435,7 +435,7 @@ const style = StyleSheet.create({
         display: 'flex',
         height: 50,
         paddingTop: 15,
-        width: '25%',
+        width: '22%',
         alignItems: 'center'
     },
     priceIcon: {
