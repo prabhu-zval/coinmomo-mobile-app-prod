@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, ScrollView } from "react-native";
-import { FontAwesome5, MaterialCommunityIcons, FontAwesome, MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { FontAwesome5, MaterialCommunityIcons, FontAwesome, MaterialIcons, Ionicons, EvilIcons } from '@expo/vector-icons';
 import { LoginContext } from "../../context/context";
 import { API } from '../../services/apiService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -53,7 +53,7 @@ export default function DrawerIndex(props) {
                 </View>
             </View> :
                 <View style={style.userDetailView}>
-                    <FontAwesome5 style={style.userIcon} name="user-circle" size={70} color="#f7f7f7" />
+                    <EvilIcons style={style.userIcon} name="user" size={80} color="white" />
                     <Text style={style.info}>Welcome User !</Text>
                 </View>}
             <View style={style.contentView}>
@@ -110,7 +110,7 @@ const style = StyleSheet.create({
         alignSelf: 'center'
     },
     info: {
-        marginTop: 13,
+        marginTop: '5%',
         alignSelf: 'center',
         color: 'white',
         fontSize: 22,
@@ -195,8 +195,8 @@ const style = StyleSheet.create({
     userImg: {
         borderRadius: 50,
         backgroundColor: 'grey',
-        width: 85,
-        height: 85,
+        width: '30%',
+        height: '39%',
         borderWidth: 4,
         borderColor: 'white',
         alignSelf: 'center',
@@ -210,7 +210,7 @@ const style = StyleSheet.create({
         alignSelf: 'center'
     },
     userDescriptionView: {
-        marginTop: 20,
+        marginTop: '8%',
         alignSelf: 'center'
     },
     userName: {
