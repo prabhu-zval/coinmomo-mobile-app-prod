@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator, Image, Modal, Pressable, LogBox, ScrollView, TextInput, Keyboard, TouchableHighlight } from 'react-native';
 import { useIsFocused } from '@react-navigation/native';
-import { AntDesign, Ionicons, EvilIcons, MaterialIcons } from '@expo/vector-icons';
+import { AntDesign, Entypo, Ionicons, EvilIcons, MaterialIcons } from '@expo/vector-icons';
 import { API } from '../../services/apiService'
 import { LoginContext } from '../../context/context';
 import { TransactionTabs } from '../headerMenus/headerMenus';
@@ -412,12 +412,10 @@ export default function PortfolioAssets(props) {
                                     </View>
                                     <View style={style.action}>
                                         <TouchableOpacity activeOpacity={0.9} style={style.addCoinContainerInner1} onPress={() => { setPopupBackground(true); openTransactionModal(val.id, val.current_price, val.name + ` (${val.symbol.toUpperCase()})`, val.image); setQuantity(''); setCurrentTab('Buy'); setModalVisible(true); setAssetsCoin(val.name + ` (${val.symbol.toUpperCase()})`); setAssetsCoinImage(val.image) }} >
-                                            <Ionicons name='add' size={20} color='white' />
-                                            <Text style={style.addCoinTextInner}>Add</Text>
+                                            <Entypo name="plus" size={25} color="white" />
                                         </TouchableOpacity>
                                         <TouchableOpacity activeOpacity={0.9} style={style.addCoinContainerInner} onPress={() => { setPopupBackground(true); setDeleteModalVisible(true); setState(val.id) }}>
-                                            <MaterialIcons name="delete-outline" size={20} color="white" />
-                                            <Text style={style.addCoinTextInner1}>Delete</Text>
+                                            <MaterialIcons name="delete-outline" size={25} color="white" />
                                         </TouchableOpacity>
                                     </View>
                                 </View>
@@ -633,34 +631,26 @@ const style = StyleSheet.create({
         marginBottom: 10
     },
     addCoinContainerInner: {
+        width: '65%',
+        height: '42%',
+        alignSelf: 'center',
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         borderRadius: 50,
         display: 'flex',
-        flexDirection: 'row',
-        paddingLeft: '10.5%',
         elevation: 5
     },
     addCoinContainerInner1: {
+        width: '65%',
+        height: '42%',
+        alignSelf: 'center',
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         borderRadius: 50,
         display: 'flex',
-        flexDirection: 'row',
-        paddingLeft: '17%',
         elevation: 5
-    },
-    addCoinTextInner: {
-        color: 'white',
-        fontSize: 14,
-        fontWeight: 'bold',
-        marginVertical: '6%'
-    },
-    addCoinTextInner1: {
-        color: 'white',
-        fontSize: 14,
-        fontWeight: 'bold',
-        marginVertical: '6%'
     },
     allHeading: {
         color: 'white',
@@ -990,7 +980,7 @@ const style = StyleSheet.create({
         paddingTop: 8
     },
     iconAndText: {
-        width: '27%',
+        width: '28%',
         marginBottom: 5,
         paddingLeft: '3%'
     },
@@ -1003,14 +993,14 @@ const style = StyleSheet.create({
         width: '60%',
     },
     price: {
-        width: '26%',
+        width: '27%',
     },
     holdings: {
-        width: '26%',
+        width: '28%',
     },
     action: {
-        width: '19%',
-        justifyContent: 'space-evenly'
+        width: '15%',
+        justifyContent: 'space-around',
     },
     backIconAndText: {
         marginTop: 25,
@@ -1108,13 +1098,13 @@ const style = StyleSheet.create({
     },
     addCoinView: {
         display: 'flex',
+        justifyContent: 'center',
         flexDirection: 'row',
-        marginHorizontal: '3%',
+        marginHorizontal: '2.5%',
         marginVertical: '5%',
     },
     addCoinIcon: {
-        paddingLeft: '3%',
-        paddingRight: '0.4%'
+        paddingLeft: '2%'
     },
     addCoinText: {
         color: 'white',

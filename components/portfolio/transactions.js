@@ -416,12 +416,10 @@ export default function PortfolioTransactions(props) {
                                 </View>
                                 <View style={style.fee}>
                                     <TouchableOpacity activeOpacity={0.9} style={style.editCoinContainerInner1} onPress={() => { TransactionEditModal(val.type, val._id, val.quantity, val.pricePerCoin, val.date, val.fee, val.notes); setPopupBackground(true); }} >
-                                        <Feather name="edit-3" size={16} color="white" />
-                                        <Text style={style.addCoinTextInner1}>Edit</Text>
+                                        <Feather style={style.actionEdit} name="edit-3" size={16} color="white" />
                                     </TouchableOpacity>
                                     <TouchableOpacity activeOpacity={0.9} style={style.editCoinContainerInner} onPress={() => { setDeleteModalVisible(true); setTransactionDelete(val._id); setPopupBackground(true); }}>
-                                        <MaterialIcons name="delete-outline" size={20} color="white" />
-                                        <Text style={style.addCoinTextInner}>Delete</Text>
+                                        <MaterialIcons style={style.actionDelete} name="delete-outline" size={20} color="white" />
                                     </TouchableOpacity>
                                 </View>
                             </View>
@@ -753,35 +751,30 @@ const style = StyleSheet.create({
         width: '40%'
     },
     editCoinContainerInner: {
+        width: '65%',
+        alignSelf: 'center',
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         borderRadius: 50,
         display: 'flex',
-        flexDirection: 'row',
-        paddingLeft: '9%',
         elevation: 5
     },
     editCoinContainerInner1: {
+        width: '65%',
+        alignSelf: 'center',
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         borderRadius: 50,
         display: 'flex',
-        flexDirection: 'row',
-        paddingLeft: '17%',
         elevation: 5
     },
-    addCoinTextInner: {
-        color: 'white',
-        fontSize: 14,
-        fontWeight: 'bold',
-        marginVertical: '5%'
+    actionEdit: {
+        marginVertical: '28%'
     },
-    addCoinTextInner1: {
-        color: 'white',
-        fontSize: 14,
-        fontWeight: 'bold',
-        marginVertical: '5%',
-        marginLeft: '7%'
+    actionDelete: {
+        marginVertical: '24%'
     },
     titles: {
         color: '#7d7d7d',
@@ -1236,7 +1229,8 @@ const style = StyleSheet.create({
         paddingHorizontal: '2%'
     },
     type: {
-        width: '26%',
+        width: '27.5%',
+        marginLeft: '1%'
     },
     bottomText: {
         color: 'green',
@@ -1250,16 +1244,15 @@ const style = StyleSheet.create({
         fontWeight: 'bold'
     },
     price: {
-        width: '26%',
+        width: '27%',
         display: 'flex'
     },
     amount: {
-        width: '28%',
+        width: '29%',
         display: 'flex'
     },
     fee: {
-        width: '18.5%',
-        display: 'flex',
+        width: '15%',
         justifyContent: 'space-evenly'
     },
     IconAndText: {
