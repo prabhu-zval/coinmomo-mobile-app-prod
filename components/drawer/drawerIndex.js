@@ -42,12 +42,16 @@ export default function DrawerIndex(props) {
             props.navigation.navigate('portfolio')
         }
     }
+    console.log(userData);
     return (
         <View style={style.sideBar}>
             {userData && userData.length > 0 ? <View style={style.userDetailView}>
-                <View style={style.userImg}>
-                    {!userData[0].image ? <Text style={style.detailText}>{userData[0].name[0].toUpperCase()}</Text> : <Image source={{ uri: userData[0].image }} />}
-                </View>
+                {!userData[0].photoUrl ? <View style={style.userImg}>
+                    <Text style={style.detailText}>{userData[0].name[0].toUpperCase()}</Text>
+                </View> :
+                    <View >
+                        <Image style={style.userPhoto} source={{ uri: userData[0].photoUrl }} />
+                    </View>}
                 <View style={style.userDescriptionView}>
                     <Text numberOfLines={1} ellipsizeMode="tail" style={style.userName}>{userData[0].name}</Text>
                 </View>
@@ -199,6 +203,14 @@ const style = StyleSheet.create({
         height: 80,
         borderWidth: 4,
         borderColor: 'white',
+        alignSelf: 'center',
+        marginTop: '15%',
+        justifyContent: 'center'
+    },
+    userPhoto: {
+        borderRadius: 50,
+        width: 80,
+        height: 80,
         alignSelf: 'center',
         marginTop: '15%',
         justifyContent: 'center'
