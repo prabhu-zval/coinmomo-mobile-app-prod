@@ -117,9 +117,9 @@ export default function ForumUser(props) {
                                     // calculate whole minutes
                                     let minutes = Math.floor(delta / 60) % 60;
                                     return (
-                                        <View key={index}>
+                                        <View key={index} style={{ marginBottom: 10 }}>
                                             <View style={style.threadsIcon}>
-                                                <View style={{ marginBottom: 15 }}>
+                                                <View style={{ marginBottom: 10 }}>
                                                     {days > 0 ? (
                                                         <Text style={style.time}>{days} day(s) ago</Text>
                                                     ) : hours > 0 ? (
