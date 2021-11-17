@@ -19,7 +19,19 @@ import CreatePortfolio from './components/userPortfolio/createPortfolio'
 import PortfolioTransactions from './components/portfolio/transactions';
 import ListingPage from './components/userPortfolio/listingPage'
 import PortfolioAssets from './components/portfolio/assets';
+import Explore from './components/explore/explore';
+import HourFilter from './components/filters/hourFilter/hourFilter';
+import BtcToUsdFilter from './components/filters/btcToUsdFilter/btcToUsdFilter';
+import AllFilter from './components/filters/allFilter/allFilter';
+import PriceFilter from './components/filters/priceFilter/priceFilter';
 import CoinDetailsPage from './components/coinDetailsPage/coinDetailsPage';
+import Forum from './components/forum/index';
+import ForumSearch from './components/forum/search';
+import ForumCreate from './components/forum/create';
+import ForumConversation from './components/forum/conversation';
+import TextEditor from './components/forum/description';
+import ForumUser from './components/forum/user';
+
 
 const Drawer = createDrawerNavigator();
 function DrawerRouteHome() {
@@ -69,10 +81,19 @@ function App() {
           }
         }}>
         <Stack.Screen name='SplashScreen' component={SplashScreen} />
-        <Stack.Screen name='explore' component={DrawerRouteExplore} />
         <Stack.Screen name='home' component={DrawerRouteHome} />
+        <Stack.Screen name='hourFilter' component={HourFilter} />
+        <Stack.Screen name='btcToUsdFilter' component={BtcToUsdFilter} />
+        <Stack.Screen name='allFilter' component={AllFilter} />
+        <Stack.Screen name='priceFilter' component={PriceFilter} />
         <Stack.Screen name='listingPage' component={DrawerRoutePortfolio} />
+        <Stack.Screen name='explore' component={DrawerRouteExplore} />
         <Stack.Screen name='forum' component={DrawerRouteForum} />
+        <Stack.Screen name='forumSearch' component={ForumSearch} />
+        <Stack.Screen name='forumCreate' component={ForumCreate} />
+        <Stack.Screen name='forumConversation' component={ForumConversation} />
+        <Stack.Screen name='forumUser' component={ForumUser} />
+        <Stack.Screen name='textEditor' component={TextEditor} />
         <Stack.Screen name='search' component={Search} />
         <Stack.Screen name='mainEvents' component={MainEvents} />
         <Stack.Screen name='highlightsViewAll' component={PopularIndexes} />

@@ -2,7 +2,7 @@
   "expo": {
     "name": "CoinMomo",
     "slug": "CoinMomo",
-    "version": "8.0.0",
+    "version": "12.0.0",
     "orientation": "portrait",
     "icon": "./assets/img/icon.png",
     "splash": {
