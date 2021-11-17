@@ -97,7 +97,7 @@ export default function ForumUser(props) {
                     <View>
                         <View style={style.border}>
                             <Text style={style.head}>Replies</Text>
-                            <View>
+                            <View style={{ marginBottom: 15 }}>
                                 {userDetails.length > 0 && userDetails[0].replies.length > 0 ? userDetails[0].replies.map((val, index) => {
                                     const html = val.description
                                     let date2 = new Date();
@@ -114,7 +114,7 @@ export default function ForumUser(props) {
                                     return (
                                         <View key={index}>
                                             <View style={style.threadsIcon}>
-                                                <View>
+                                                <View style={{ marginBottom: 15 }}>
                                                     {days > 0 ? (
                                                         <Text style={style.time}>{days} day(s) ago</Text>
                                                     ) : hours > 0 ? (
