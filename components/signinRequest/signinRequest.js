@@ -22,9 +22,9 @@ export default function SigninRequest(props) {
         setLoginLoading(true)
         try {
             const result = await Google.logInAsync({
-                androidClientId: "979008837894-qm7odjf41loq23gjv9jpar79m0setp50.apps.googleusercontent.com",
+                androidClientId: "994526388178-61b2acf0jr4pog9h7h9mqec1tubh5j36.apps.googleusercontent.com",
                 osClientId: '210636253663-dq4rc5i92vr6q2a5110ass0sr2vkrk3v.apps.googleusercontent.com',
-                androidStandaloneAppClientId: "979008837894-qm7odjf41loq23gjv9jpar79m0setp50.apps.googleusercontent.com",
+                androidStandaloneAppClientId: "994526388178-61b2acf0jr4pog9h7h9mqec1tubh5j36.apps.googleusercontent.com",
                 iosStandaloneAppClientId: '210636253663-dq4rc5i92vr6q2a5110ass0sr2vkrk3v.apps.googleusercontent.com',
                 scopes: ["profile", "email"],
                 //host.exp.exponent -->change it in gcp to work in simulator
