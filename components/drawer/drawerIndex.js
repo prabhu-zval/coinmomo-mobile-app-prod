@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, ScrollView } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import { FontAwesome5, MaterialCommunityIcons, FontAwesome, MaterialIcons, Ionicons, EvilIcons } from '@expo/vector-icons';
 import { LoginContext } from "../../context/context";
 import { API } from '../../services/apiService';
@@ -46,7 +46,7 @@ export default function DrawerIndex(props) {
         <View style={style.sideBar}>
             {userData && userData.length > 0 ? <View style={style.userDetailView}>
                 <View style={style.userImg}>
-                    <Text style={style.detailText}>{userData[0].name[0].toUpperCase()}</Text>
+                    {!userData[0].image ? <Text style={style.detailText}>{userData[0].name[0].toUpperCase()}</Text> : <Image source={{ uri: userData[0].image }} />}
                 </View>
                 <View style={style.userDescriptionView}>
                     <Text numberOfLines={1} ellipsizeMode="tail" style={style.userName}>{userData[0].name}</Text>
