@@ -227,8 +227,8 @@ export default function TransferTab() {
                                 setCurrentTab(itemValue);
                             }}
                         >
-                            <Picker.Item label="TRANSFER IN" value="TRANSFER IN" />
-                            <Picker.Item label="TRANSFER OUT" value="TRANSFER OUT" />
+                            <Picker.Item label="Transfer In" value="Transfer In" />
+                            <Picker.Item label="Transfer Out" value="Transfer Out" />
                         </Picker>
                     </View>
                     <View style={style.quantityContainer}>
@@ -566,8 +566,10 @@ const style = StyleSheet.create({
         marginRight: 15,
     },
     pickerViewContainer: {
-        borderColor: "black",
-        borderWidth: 0.5,
+        borderBottomColor: "#F75626",
+        borderBottomWidth: 1,
+        backgroundColor: '#eff2f5',
+        justifyContent: 'center'
     },
     transferText: {
         fontWeight: "bold",
@@ -779,12 +781,11 @@ const style = StyleSheet.create({
         justifyContent: "space-between",
     },
     placeholder: {
-        backgroundColor: "white",
+        backgroundColor: "#eff2f5",
         width: "100%",
-        borderColor: "black",
-        borderWidth: 0.7,
+        borderBottomColor: "#F75626",
+        borderBottomWidth: 1.8,
         height: 35,
-        borderRadius: 4,
         paddingLeft: 10,
     },
     dateView: {

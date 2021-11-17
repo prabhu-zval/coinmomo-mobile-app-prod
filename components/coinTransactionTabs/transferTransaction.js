@@ -271,9 +271,10 @@ const style = StyleSheet.create({
         marginRight: 15
     },
     pickerViewContainer: {
-        borderColor: 'black',
-        borderWidth: 0.5,
-        borderBottomWidth: 0.7
+        backgroundColor: '#eff2f5',
+        borderBottomColor: '#F75626',
+        borderBottomWidth: 1.5,
+        justifyContent: 'center'
     },
     transferText: {
         marginBottom: 3
@@ -503,12 +504,11 @@ const style = StyleSheet.create({
         width: '100%'
     },
     placeholder: {
-        backgroundColor: 'white',
         width: '100%',
-        borderColor: 'black',
-        borderWidth: 0.7,
+        backgroundColor: '#eff2f5',
+        borderBottomColor: '#F75626',
+        borderBottomWidth: 1.5,
         height: 35,
-        borderRadius: 4,
         paddingLeft: 10
     },
     dateView: {

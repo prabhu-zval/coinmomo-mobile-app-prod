@@ -848,12 +848,11 @@ const style = StyleSheet.create({
         width: "50%",
     },
     placeholder: {
-        backgroundColor: "white",
-        borderColor: "black",
-        borderWidth: 1,
+        backgroundColor: "#eff2f5",
+        borderBottomColor: "#F75626",
+        borderBottomWidth: 1,
         width: "95%",
         height: 35,
-        borderRadius: 4,
         paddingLeft: 10,
     },
     quantityError: {

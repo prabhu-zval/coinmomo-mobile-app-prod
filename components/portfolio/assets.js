@@ -356,10 +356,12 @@ export default function PortfolioAssets(props) {
             <View style={style.backIconAndText}>
                 <Text style={style.yourAssetsText}>Your Assets</Text>
             </View>
-            <View style={{ flexDirection: 'row' }}>
-                <AntDesign onPress={() => { setPopupBackground(true); setEditModalVisible(true); toggleMenu(''); toggleMenu(portfolioName); setVisible(true); setPortfolio(portfolioName); setEdit(id); }} name="edit" size={24} color="black" style={{ marginTop: 20, marginLeft: 10 }} />
+            <View style={{ flexDirection: 'row', width: '100%', paddingLeft: '3%' }}>
+                <View style={{ flexDirection: 'row', width:'72%' }}>
+                <AntDesign onPress={() => { setPopupBackground(true); setEditModalVisible(true); toggleMenu(''); toggleMenu(portfolioName); setVisible(true); setPortfolio(portfolioName); setEdit(id); }} name="edit" size={24} color="black" style={{ marginTop: 20 }} />
                 <View style={style.nameContainer}>
                     <Text ellipsizeMode='tail' numberOfLines={1} style={style.portfolioName}>{portfolioName}</Text>
+                </View>
                 </View>
                 <TouchableOpacity activeOpacity={0.9} style={style.addCoinContainer} onPress={() => { setPopupBackground(true); setCoinModalVisible(true); setCurrentTab('Buy'); setCoinInputValue(null), setCoinRenderData(null); setCoinImage(null); onChangeCoinTextFunction('a'); }}>
                     <View style={style.addCoinView}>
@@ -412,10 +414,10 @@ export default function PortfolioAssets(props) {
                                     </View>
                                     <View style={style.action}>
                                         <TouchableOpacity activeOpacity={0.9} style={style.addCoinContainerInner1} onPress={() => { setPopupBackground(true); openTransactionModal(val.id, val.current_price, val.name + ` (${val.symbol.toUpperCase()})`, val.image); setQuantity(''); setCurrentTab('Buy'); setModalVisible(true); setAssetsCoin(val.name + ` (${val.symbol.toUpperCase()})`); setAssetsCoinImage(val.image) }} >
-                                            <Entypo style={style.actionAdd} name="plus" size={25} color="white" />
+                                            <Entypo name="plus" size={25} color="white" />
                                         </TouchableOpacity>
                                         <TouchableOpacity activeOpacity={0.9} style={style.addCoinContainerInner} onPress={() => { setPopupBackground(true); setDeleteModalVisible(true); setState(val.id) }}>
-                                            <MaterialIcons style={style.actionDelete} name="delete-outline" size={25} color="white" />
+                                            <MaterialIcons name="delete-outline" size={25} color="white" />
                                         </TouchableOpacity>
                                     </View>
                                 </View>
@@ -631,7 +633,8 @@ const style = StyleSheet.create({
         marginBottom: 10
     },
     addCoinContainerInner: {
-        width: '65%',
+        width: 40,
+        height: 40,
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
@@ -641,7 +644,8 @@ const style = StyleSheet.create({
         elevation: 5
     },
     addCoinContainerInner1: {
-        width: '65%',
+        width: 40,
+        height: 40,
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
@@ -722,7 +726,7 @@ const style = StyleSheet.create({
     },
     nameContainer: {
         justifyContent: 'flex-start',
-        width: '61%',
+        width: '92%',
         padding: 10,
         paddingLeft: '3%',
         marginTop: 10,
@@ -1092,6 +1096,7 @@ const style = StyleSheet.create({
         textAlign: 'center'
     },
     addCoinContainer: {
+        width: '24%',
         alignItems: 'center',
         backgroundColor: '#3F51B5',
         alignSelf: 'flex-end',
@@ -1099,6 +1104,7 @@ const style = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         marginBottom: '1%',
+        paddingLeft: '0.4%'
     },
     addCoinView: {
         display: 'flex',

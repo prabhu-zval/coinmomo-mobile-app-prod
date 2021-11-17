@@ -509,12 +509,11 @@ const style = StyleSheet.create({
         justifyContent: 'space-around'
     },
     placeholder: {
-        backgroundColor: 'white',
-        borderColor: 'black',
-        borderWidth: 0.7,
+        backgroundColor: '#eff2f5',
+        borderBottomColor: '#F75626',
+        borderBottomWidth: 1.4,
         width: '98%',
         height: 35,
-        borderRadius: 4,
         paddingLeft: 10
     },
     dateView: {
@@ -525,7 +524,7 @@ const style = StyleSheet.create({
         width: '49%'
     },
     quantity: {
-        width: '50%'
+        width: '48%'
     },
     price: {
         width: '50%'

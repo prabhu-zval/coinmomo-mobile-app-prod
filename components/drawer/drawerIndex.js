@@ -195,8 +195,8 @@ const style = StyleSheet.create({
     userImg: {
         borderRadius: 50,
         backgroundColor: 'grey',
-        width: '30%',
-        height: '39%',
+        width: 80,
+        height: 80,
         borderWidth: 4,
         borderColor: 'white',
         alignSelf: 'center',

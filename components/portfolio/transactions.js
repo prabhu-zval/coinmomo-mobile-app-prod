@@ -618,7 +618,7 @@ export default function PortfolioTransactions(props) {
                                         {quantityError != "" ? <Text style={style.quantityErrorText}>{quantityError}</Text> : null}
                                         <View style={{ marginBottom: 10 }}>
                                             <Text style={style.pricePerCoinText}>Price Per Coin</Text>
-                                            <TextInput value={sellBuyPrice} onChangeText={(text) => setPricePerCoin(text)} style={style.placeholder} placeholder='$32,550'></TextInput>
+                                            <TextInput value={sellBuyPrice} onChangeText={(text) => setPricePerCoin(text)} style={style.coinplaceholder} placeholder='$32,550'></TextInput>
                                         </View>
                                     </View>
                                     <View style={style.dateFeesAndNotes}>
@@ -751,7 +751,8 @@ const style = StyleSheet.create({
         width: '40%'
     },
     editCoinContainerInner: {
-        width: '65%',
+        width: 40,
+        height: 40,
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
@@ -761,7 +762,8 @@ const style = StyleSheet.create({
         elevation: 5
     },
     editCoinContainerInner1: {
-        width: '65%',
+        width: 40,
+        height: 40,
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
@@ -769,12 +771,6 @@ const style = StyleSheet.create({
         borderRadius: 50,
         display: 'flex',
         elevation: 5
-    },
-    actionEdit: {
-        marginVertical: '25%'
-    },
-    actionDelete: {
-        marginVertical: '21%'
     },
     titles: {
         color: '#7d7d7d',
@@ -1066,12 +1062,19 @@ const style = StyleSheet.create({
         flexDirection: 'row'
     },
     placeholder: {
-        backgroundColor: 'white',
         width: '100%',
         height: 35,
-        borderWidth: 1,
-        borderColor: 'black',
-        borderRadius: 4,
+        backgroundColor: '#eff2f5',
+        borderBottomColor: '#F75626',
+        borderBottomWidth: 1.4,
+        paddingLeft: 10
+    },
+    coinplaceholder: {
+        width: '100%',
+        height: 35,
+        backgroundColor: '#eff2f5',
+        borderBottomColor: '#F75626',
+        borderBottomWidth: 1.3,
         paddingLeft: 10
     },
     quantityAndPrice: {
@@ -1345,7 +1348,7 @@ const style = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         marginTop: '2.2%',
-        marginRight: '2.5%'
+        marginRight: '4%'
     },
     addTransactionView: {
         display: 'flex',
@@ -1362,9 +1365,7 @@ const style = StyleSheet.create({
     editTransaction: {
         fontWeight: 'bold',
         color: '#F75626',
-        fontSize: 18,
-        borderBottomColor: '#F75626',
-        borderBottomWidth: 1.5
+        fontSize: 18
     },
     dateView: {
         width: '50%',
