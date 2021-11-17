@@ -7,6 +7,7 @@ import { API } from "../../services/apiService";
 import RenderHTML from "react-native-render-html";
 
 export default function ForumUser(props) {
+    console.log('hello', props);
     const [userDetails, setUsersDetails] = useState([])
     const [userLoading, setUserLoading] = useState(false)
     const [reputation, setReputation] = useState(null)
@@ -43,9 +44,13 @@ export default function ForumUser(props) {
                 <View style={style.container}>
                     <View style={style.border}>
                         <View style={style.userHeader}>
-                            <View style={style.userImg}>
-                                {!props.route.params.userData.Image ? <Text style={style.userText}>{props.route.params.userData.name.charAt(0).toUpperCase()}</Text> : <Image style={style.userImage} source={props.route.params.userData.Image} />}
-                            </View>
+                            {!props.route.params.userData.image ?
+                                <View style={style.userImg}>
+                                    <Text style={style.userText}>{props.route.params.userData.name.charAt(0).toUpperCase()}</Text>
+                                </View> :
+                                <View >
+                                    <Image style={style.userImage} source={{ uri: props.route.params.userData.image }} />
+                                </View>}
                             <View style={style.conversationUserNameAndEmail}>
                                 <Text style={style.userName}>{props.route.params.userData.name[0].toUpperCase() + props.route.params.userData.name.slice(1)}</Text>
                             </View>
@@ -244,9 +249,7 @@ const style = StyleSheet.create({
     },
     userHeader: {
         display: 'flex',
-        // flex: 1,
         flexDirection: 'row',
-        // justifyContent: 'flex-start',
         backgroundColor: '#FFFFFF',
         marginTop: 5,
         marginBottom: 15,
@@ -270,6 +273,8 @@ const style = StyleSheet.create({
     userImage: {
         width: 40,
         height: 40,
+        borderRadius: 50,
+        marginRight: '2%'
     },
     userName: {
         marginTop: 5,
