@@ -1104,22 +1104,21 @@ const style = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         marginBottom: '1%',
-        paddingLeft: '0.4%'
     },
     addCoinView: {
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'row',
-        marginHorizontal: '2.5%',
         marginVertical: '5%',
     },
     addCoinIcon: {
-        paddingLeft: '2%'
+        paddingLeft: 5
     },
     addCoinText: {
         color: 'white',
         fontSize: 15,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        paddingRight: 5
     },
     zeroPnlPercentage: {
         color: 'black'
