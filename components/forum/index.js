@@ -528,7 +528,7 @@ const style = StyleSheet.create({
     replies: {
         color: 'black',
         textAlign: 'center',
-        paddingTop: 10
+        paddingTop: 10,
     },
     repliesView: {
         width: '10%',

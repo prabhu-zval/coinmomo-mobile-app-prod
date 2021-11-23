@@ -415,19 +415,16 @@ const style = StyleSheet.create({
     },
     hotIndexDataContainer: {
         height: '100%',
-        paddingBottom: 90,
         backgroundColor: '#CAD5E2',
         paddingTop: 10
     },
     significantIndexDataContainer: {
         height: '100%',
-        paddingBottom: 90,
         backgroundColor: '#CAD5E2',
         paddingTop: 10
     },
     trendingIndexDataContainer: {
         height: '100%',
-        paddingBottom: 90,
         backgroundColor: '#CAD5E2',
         paddingTop: 10
     },

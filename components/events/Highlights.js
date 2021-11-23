@@ -11,6 +11,13 @@ export default function Highlights(props) {
         if (index < 1) {
             return (
                 <View key={index} style={style.highlightsData}>
+                    <View style={style.hotTextAndIcon}>
+                        <FontAwesome5 style={style.indexIcon} name="hotjar" size={20} color="white" />
+                        <Text style={style.HotText}>Hot Index</Text>
+                        <TouchableOpacity onPress={() => props.navigation.navigate('highlightsViewAll', { name: 'hot' })}>
+                            <Text style={style.hotIndexViewAllText}>View All</Text>
+                        </TouchableOpacity>
+                    </View>
                     <View style={style.iconAndCoinName}>
                         <Image style={style.image} source={{ uri: IMAGE_PATH.imageurl + `${val.coins[0].id}_normal.png` }} />
                         <Text style={style.coinName}>{val.coins[0].name} ({val.coins[0].symbol})</Text>
@@ -41,6 +48,13 @@ export default function Highlights(props) {
         if (index < 1) {
             return (
                 <View key={index} style={style.highlightsData}>
+                    <View style={style.significantTextAndIcon}>
+                        <MaterialIcons style={style.indexIcon} name="trending-up" size={25} color="white" />
+                        <Text style={style.significantText}>Significant Index</Text>
+                        <TouchableOpacity onPress={() => props.navigation.navigate('highlightsViewAll', { name: 'significant' })}>
+                            <Text style={style.significantIndexViewAllText} >View All</Text>
+                        </TouchableOpacity>
+                    </View>
                     <View style={style.iconAndCoinName}>
                         <Image style={style.image} source={{ uri: IMAGE_PATH.imageurl + `${val.coins[0].id}_normal.png` }} />
                         <Text style={style.coinName}>{val.coins[0].name} ({val.coins[0].symbol})</Text>
@@ -71,6 +85,13 @@ export default function Highlights(props) {
         if (index < 1) {
             return (
                 <View key={index} style={style.highlightsData}>
+                    <View style={style.trendingTextAndIcon}>
+                        <FontAwesome5 style={style.indexIcon} name="crown" size={20} color="white" />
+                        <Text style={style.trendingText}>Trending Index</Text>
+                        <TouchableOpacity onPress={() => props.navigation.navigate('highlightsViewAll', { name: 'trending' })}>
+                            <Text style={style.trendingIndexViewAllText}>View All</Text>
+                        </TouchableOpacity>
+                    </View>
                     <View style={style.iconAndCoinName}>
                         <Image style={style.image} source={{ uri: IMAGE_PATH.imageurl + `${val.coins[0].id}_normal.png` }} />
                         <Text style={style.coinName}>{val.coins[0].name} ({val.coins[0].symbol})</Text>
@@ -108,36 +129,9 @@ export default function Highlights(props) {
                 <Text style={style.highlightsText}>HIGHLIGHTS</Text>
             </View>
             <View style={style.highlightsContainer}>
-                <View>
-                    <View style={style.trendingTextAndIcon}>
-                        <FontAwesome5 style={style.indexIcon} name="crown" size={20} color="white" />
-                        <Text style={style.trendingText}>Trending Index</Text>
-                        <TouchableOpacity onPress={() => props.navigation.navigate('highlightsViewAll', { name: 'trending' })}>
-                            <Text style={style.trendingIndexViewAllText}>View All</Text>
-                        </TouchableOpacity>
-                    </View>
-                    {totalTrendingIndex}
-                </View>
-                <View>
-                    <View style={style.significantTextAndIcon}>
-                        <MaterialIcons style={style.indexIcon} name="trending-up" size={25} color="white" />
-                        <Text style={style.significantText}>Significant Index</Text>
-                        <TouchableOpacity onPress={() => props.navigation.navigate('highlightsViewAll', { name: 'significant' })}>
-                            <Text style={style.significantIndexViewAllText} >View All</Text>
-                        </TouchableOpacity>
-                    </View>
-                    {totalSignificantIndex}
-                </View>
-                <View>
-                    <View style={style.hotTextAndIcon}>
-                        <FontAwesome5 style={style.indexIcon} name="hotjar" size={20} color="white" />
-                        <Text style={style.HotText}>Hot Index</Text>
-                        <TouchableOpacity onPress={() => props.navigation.navigate('highlightsViewAll', { name: 'hot' })}>
-                            <Text style={style.hotIndexViewAllText}>View All</Text>
-                        </TouchableOpacity>
-                    </View>
-                    {totalHotIndex}
-                </View>
+                {totalTrendingIndex}
+                {totalSignificantIndex}
+                {totalHotIndex}
             </View>
         </View >
     )
@@ -231,13 +225,12 @@ const style = StyleSheet.create({
         paddingLeft: 10
     },
     highlightsData: {
-        height: 175,
+        height: '27%',
         marginLeft: '1%',
         marginRight: '1%',
         backgroundColor: 'white',
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
-        padding: '1%',
+        borderRadius: 20,
+        marginBottom: '1.5%',
     },
     significantText: {
         fontWeight: 'bold',
@@ -284,10 +277,7 @@ const style = StyleSheet.create({
         paddingLeft: '5%',
         height: 35,
         borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        marginRight: '1%',
-        marginLeft: '1%',
-        marginTop: '1%'
+        borderTopRightRadius: 20
     },
     significantTextAndIcon: {
         display: 'flex',
@@ -296,10 +286,7 @@ const style = StyleSheet.create({
         paddingLeft: '5%',
         height: 35,
         borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        marginRight: '1%',
-        marginLeft: '1%',
-        marginTop: '1%'
+        borderTopRightRadius: 20
     },
     trendingTextAndIcon: {
         display: 'flex',
@@ -308,16 +295,13 @@ const style = StyleSheet.create({
         paddingLeft: '5%',
         height: 35,
         borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        marginRight: '1%',
-        marginLeft: '1%',
-        marginTop: '1%'
+        borderTopRightRadius: 20
     },
     iconAndCoinName: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: 8
+        marginTop: "2%"
     },
     image: {
         height: 25,
@@ -332,7 +316,7 @@ const style = StyleSheet.create({
         textAlign: 'center',
     },
     eventNameAndDate: {
-        marginTop: 3,
+        marginTop: '1%',
         alignItems: 'center'
     },
     viewsAndVotes: {
@@ -341,17 +325,18 @@ const style = StyleSheet.create({
         justifyContent: 'space-between',
         marginLeft: '5%',
         marginRight: '5%',
-        marginTop: 5
+        marginTop: '1.5%'
     },
     eventDate: {
         color: 'green'
     },
     source: {
-        height: 30,
+        height: 25,
         width: '45%',
         borderRadius: 50,
         backgroundColor: '#3F51B5',
-        marginTop: 10,
+        marginTop: '3%',
+        marginBottom: '1%',
         fontSize: 13,
         alignSelf: 'center',
         justifyContent: 'center'
